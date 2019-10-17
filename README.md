@@ -2,7 +2,7 @@
 dive into deep learning tensorflow 2.0 implementation
 
 Dive into Deep Learning is a fantastic book and the code in there is based on MXnet.
-In there repo we're trying to rewrite all the code in the book on tensorflow 2.0.
+In this repo we're trying to rewrite all the code in the book on tensorflow 2.0.
 
 learn tf2.0 with Tricky
 
