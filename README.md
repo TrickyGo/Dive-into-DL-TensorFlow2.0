@@ -6,7 +6,7 @@ In this repo we're trying to rewrite all the code in the book on tensorflow 2.0.
 
 learn tf2.0 with Tricky and Archersama ！
 
-本项目将[《动手学深度学习》](http://zh.d2l.ai/) 原书中MXNet代码实现改为tensorflow2.0实现。原书作者：阿斯顿·张、李沐、扎卡里 C. 立顿、亚历山大 J. 斯莫拉以及其他社区贡献者，GitHub地址：https://github.com/d2l-ai/d2l-zh
+本项目将伯克利“深度学习导论”教材[《动手学深度学习》](http://zh.d2l.ai/) 原书中MXNet代码实现改为tensorflow2.0实现。原书作者：阿斯顿·张、李沐、扎卡里 C. 立顿、亚历山大 J. 斯莫拉以及其他社区贡献者，GitHub地址：https://github.com/d2l-ai/d2l-zh
 
 ## 简介
 ### 目前处于代码编写状态，未包含文本，请参照原书阅读本项目对应代码
@@ -45,7 +45,7 @@ learn tf2.0 with Tricky and Archersama ！
 [4.4 自定义层]   
 [4.5 读取和存储] 
 [4.6 GPU计算]  
-
+### 5. 卷积神经网络
 
 
 持续更新中......
