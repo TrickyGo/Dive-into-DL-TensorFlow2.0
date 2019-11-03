@@ -19,7 +19,7 @@ Learn tf2.0 with Tricky and Archersama ！
 
 ## 目录
 ### 1. 深度学习简介
-* [1. 深度学习简介](chapter01/deep-learning-intro.md)
+* [1. 深度学习简介](deep-learning-intro.md)
 ### 2. 预备知识
 [2.1 环境配置] 
 
