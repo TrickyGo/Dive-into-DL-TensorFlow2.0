@@ -12,7 +12,7 @@ Learn tf2.0 with Tricky and Archersama ！
 
 本项目将伯克利“深度学习导论”教材[《动手学深度学习》](http://zh.d2l.ai/) 原书中MXNet代码实现改为tensorflow2.0实现。原书作者：阿斯顿·张、李沐、扎卡里 C. 立顿、亚历山大 J. 斯莫拉以及其他社区贡献者，GitHub地址：https://github.com/d2l-ai/d2l-zh
 本仓库主要包含每章相关jupyter notebook代码（基于tensorflow2.0）；欢迎对本项目做出贡献或提出issue。
-### (目前处于代码编写状态，文本不全，请参照原书阅读本项目对应代码)
+
 
 ## 面向人群
 本项目面向对深度学习感兴趣，尤其是使用tensorflow。本项目并不要求你有任何深度学习或者机器学习的背景知识，你只需了解基础的数学和编程，如基础的线性代数、微分和概率，以及基础的Python编程。
