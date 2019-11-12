@@ -36,7 +36,7 @@ docsify serve docs
 ## 目录
 * [简介]()
 * [阅读指南](read_guide.md)
-* [1. 深度学习简介](Documents (for reading)/ch1_DL_Introduction/deep-learning-intro.md)
+* [1. 深度学习简介](https://github.com/TrickyGo/tensorflow-2.0-dive-into-dl/blob/master/Documents%20(for%20reading)/ch1_DL_Introduction/deep-learning-intro.md)
 * 2\. 预备知识
    * [2.1 环境配置](chapter02_prerequisite/2.1_install.md)
    * [2.2 数据操作](chapter02_prerequisite/2.2_tensor.md)
