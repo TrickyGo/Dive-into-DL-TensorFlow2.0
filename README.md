@@ -1,5 +1,5 @@
 <div align=center>
-<img width="500" src="img/cover.png" alt="封面"/>
+<img width="500" src="imags/cover.png" alt="封面"/>
 </div>
 
 [本项目](TODO)将[《动手学深度学习》](http://zh.d2l.ai/) 原书中MXNet代码实现改为TensorFlow实现。原书作者：阿斯顿·张、李沐、扎卡里 C. 立顿、亚历山大 J. 斯莫拉以及其他社区贡献者，GitHub地址：https://github.com/d2l-ai/d2l-zh
