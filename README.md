@@ -39,8 +39,8 @@ docsify serve docs
 * [1. 深度学习简介](https://github.com/TrickyGo/tensorflow-2.0-dive-into-dl/blob/master/Documents%20(for%20reading)/ch1_DL_Introduction/deep-learning-intro.md)
 * 2\. 预备知识
    * [2.1 环境配置](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch2_prerequsite/2.2%20data%20manipulate.md)
-   * [2.2 数据操作](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/tree/master/Documents%20(for%20reading)/ch2_prerequsite)
-   * [2.3 自动求梯度](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch2_prerequsite/2.4%20document.md)
+   * [2.2 数据操作](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch2_prerequsite/2.2%20data%20manipulate.md)
+   * [2.3 自动求梯度](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch2_prerequsite/2.3%20autoGradient.md)
 * 3\. 深度学习基础
    * [3.1 线性回归](chapter03_DL-basics/3.1_linear-regression.md)
    * [3.2 线性回归的从零开始实现](chapter03_DL-basics/3.2_linear-regression-scratch.md)
