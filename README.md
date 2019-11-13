@@ -24,8 +24,8 @@ npm i docsify-cli -g
 ```
 然后将本项目clone到本地:
 ``` shell
-git clone https://github.com/imsheridan/Dive-into-DL-TensorFlow
-cd Dive-into-DL-TensorFlow
+git clone https://github.com/imsheridan/Dive-into-DL-TensorFlow2.0
+cd Dive-into-DL-TensorFlow2.0
 ```
 然后运行一个本地服务器，这样就可以很方便的在`http://localhost:3000`实时访问文档网页渲染效果。
 ``` shell
