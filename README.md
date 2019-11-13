@@ -45,7 +45,7 @@ docsify serve docs
    * [3.1 线性回归](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch_3_DL_basic/3.1_linear-regression.md)
    * [3.2 线性回归的从零开始实现](chapter03_DL-basics/3.2_linear-regression-scratch.md)
    * [3.3 线性回归的简洁实现](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch_3_DL_basic/3.3_linear-regression-tensorflow2.0%20.md)
-   * [3.4 softmax回归](chapter03_DL-basics/3.4_softmax-regression.md)
+   * [3.4 softmax回归](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch_3_DL_basic/3.4_softmax-regression.md)
    * [3.5 图像分类数据集（Fashion-MNIST）](chapter03_DL-basics/3.5_fashion-mnist.md)
    * [3.6 softmax回归的从零开始实现](chapter03_DL-basics/3.6_softmax-regression-scratch.md)
    * [3.7 softmax回归的简洁实现](chapter03_DL-basics/3.7_softmax-regression-pytorch.md)
