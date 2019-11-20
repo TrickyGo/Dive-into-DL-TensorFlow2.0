@@ -79,7 +79,7 @@ docsify serve docs
    * [5.11 残差网络（ResNet）](chapter05_CNN/5.11_resnet.md)
    * [5.12 稠密连接网络（DenseNet）](chapter05_CNN/5.12_densenet.md)
 * 6\. 循环神经网络
-   * [6.1 语言模型](chapter06_RNN/6.1_lang-model.md)
+   * [6.1 语言模型](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch6_RNN/6.1_lang-model.md)
    * [6.2 循环神经网络](chapter06_RNN/6.2_rnn.md)
    * [6.3 语言模型数据集（周杰伦专辑歌词）](chapter06_RNN/6.3_lang-model-dataset.md)
    * [6.4 循环神经网络的从零开始实现](chapter06_RNN/6.4_rnn-scratch.md)
