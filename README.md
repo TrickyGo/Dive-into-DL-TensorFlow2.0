@@ -56,7 +56,7 @@ docsify serve docs
    * [3.12 权重衰减](chapter03_DL-basics/3.12_weight-decay.md)
    * [3.13 丢弃法](chapter03_DL-basics/3.13_dropout.md)
    * [3.14 正向传播、反向传播和计算图](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch3_DL_basics/3.14_backprop.md)
-   * [3.15 数值稳定性和模型初始化](chapter03_DL-basics/3.15_numerical-stability-and-init.md)
+   * [3.15 数值稳定性和模型初始化](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch3_DL_basics/3.15_numerical-stability-and-init.md)
    * [3.16 实战Kaggle比赛：房价预测](chapter03_DL-basics/3.16_kaggle-house-price.md)
 * 4\. 深度学习计算
    * [4.1 模型构造](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch4_DL_computation/4.1%20build%20model.md)
