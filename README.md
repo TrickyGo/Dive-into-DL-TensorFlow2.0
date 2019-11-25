@@ -41,6 +41,7 @@ docsify serve docs
    * [2.1 环境配置](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch2_prerequsite/2.1_install.md)
    * [2.2 数据操作](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch2_prerequsite/2.2%20data%20manipulate.md)
    * [2.3 自动求梯度](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch2_prerequsite/2.3%20autoGradient.md)
+   * [2.4 查阅文档](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch2_prerequsite/2.4%20document.md)
 * 3\. 深度学习基础
    * [3.1 线性回归](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch3_DL_basics/3.1_linear-regression.md)
    * [3.2 线性回归的从零开始实现](chapter03_DL-basics/3.2_linear-regression-scratch.md)
