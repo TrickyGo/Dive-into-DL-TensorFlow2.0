@@ -6,7 +6,7 @@
 
 此书的[中](https://zh.d2l.ai/)、[英](https://d2l.ai/)版本存在一些不同，本项目主要针对此书的中文版进行TensorFlow2.0重构。另外，针对此书中文版的Pytorch重构可以参考[这个项目](https://github.com/ShusenTang/Dive-into-DL-PyTorch)
 
-## 现已更新到第五章
+## 现已更新到第五章，持续更新中。。。
 ## 简介
 本仓库主要包含code和docs两个文件夹（外加一些数据存放在data中）。其中code文件夹就是每章相关jupyter notebook代码（基于TensorFlow）；docs文件夹就是markdown格式的《动手学深度学习》书中的相关内容，然后利用[docsify](https://docsify.js.org/#/zh-cn/)将网页文档部署到GitHub Pages上，由于原书使用的是MXNet框架，所以docs内容可能与原书略有不同，但是整体内容是一样的。欢迎对本项目做出贡献或提出issue。
 
