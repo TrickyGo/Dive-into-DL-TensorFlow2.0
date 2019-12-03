@@ -61,12 +61,12 @@ docsify serve docs
    * [3.15 数值稳定性和模型初始化](chapter03_DL-basics/3.15_numerical-stability-and-init.md)
    * [3.16 实战Kaggle比赛：房价预测](chapter03_DL-basics/3.16_kaggle-house-price.md)
 * 4\. 深度学习计算
-   * [4.1 模型构造](chapter04_DL_computation/4.1_model-construction.md)
-   * [4.2 模型参数的访问、初始化和共享](chapter04_DL_computation/4.2_parameters.md)
-   * [4.3 模型参数的延后初始化](chapter04_DL_computation/4.3_deferred-init.md)
-   * [4.4 自定义层](chapter04_DL_computation/4.4_custom-layer.md)
-   * [4.5 读取和存储](chapter04_DL_computation/4.5_read-write.md)
-   * [4.6 GPU计算](chapter04_DL_computation/4.6_use-gpu.md)
+   * [4.1 模型构造](chapter04_DL-computation/4.1_model-construction.md)
+   * [4.2 模型参数的访问、初始化和共享](chapter04_DL-computation/4.2_parameters.md)
+   * [4.3 模型参数的延后初始化](chapter04_DL-computation/4.3_deferred-init.md)
+   * [4.4 自定义层](chapter04_DL-computation/4.4_custom-layer.md)
+   * [4.5 读取和存储](chapter04_DL-computation/4.5_read-write.md)
+   * [4.6 GPU计算](chapter04_DL-computation/4.6_use-gpu.md)
 * 5\. 卷积神经网络
    * [5.1 二维卷积层](chapter05_CNN/5.1_conv-layer.md)
    * [5.2 填充和步幅](chapter05_CNN/5.2_padding-and-strides.md)
