@@ -1,12 +1,13 @@
 <div align=center>
-<img width="500" src="imags/cover1.PNG" alt="封面"/>
+<img width="500" src="img/cover.png" alt="封面"/>
 </div>
 
-[本项目](TODO)将[《动手学深度学习》](http://zh.d2l.ai/) 原书中MXNet代码实现改为TensorFlow2.0实现。经过我的导师咨询李沐老师，这个项目的实施已得到李沐老师的同意。原书作者：阿斯顿·张、李沐、扎卡里 C. 立顿、亚历山大 J. 斯莫拉以及其他社区贡献者，GitHub地址：https://github.com/d2l-ai/d2l-zh
+[本项目](https://TrickyGo.github.io/Dive-into-DL-TensorFlow2.0)将[《动手学深度学习》](http://zh.d2l.ai/) 原书中MXNet代码实现改为TensorFlow2.0实现。经过我的导师咨询李沐老师，这个项目的实施已得到李沐老师的同意。原书作者：阿斯顿·张、李沐、扎卡里 C. 立顿、亚历山大 J. 斯莫拉以及其他社区贡献者，GitHub地址：https://github.com/d2l-ai/d2l-zh
 
-此书的[中](https://zh.d2l.ai/)、[英](https://d2l.ai/)版本存在一些不同，本项目主要针对此书的中文版进行TensorFlow2.0重构。另外，针对此书中文版的Pytorch重构可以参考[这个项目](https://github.com/ShusenTang/Dive-into-DL-PyTorch)
+此书的[中](https://zh.d2l.ai/)、[英](https://d2l.ai/)版本存在一些不同，本项目主要针对此书的中文版进行TensorFlow2.0重构。另外，本项目也参考了对此书中文版进行PyTorch重构的项目[Dive-into-DL-PyTorch](https://github.com/ShusenTang/Dive-into-DL-PyTorch)，在此表示感谢。
 
-## 现已更新到第五章，持续更新中。。。
+**现已更新到第五章，持续更新中。。。**
+
 ## 简介
 本仓库主要包含code和docs两个文件夹（外加一些数据存放在data中）。其中code文件夹就是每章相关jupyter notebook代码（基于TensorFlow）；docs文件夹就是markdown格式的《动手学深度学习》书中的相关内容，然后利用[docsify](https://docsify.js.org/#/zh-cn/)将网页文档部署到GitHub Pages上，由于原书使用的是MXNet框架，所以docs内容可能与原书略有不同，但是整体内容是一样的。欢迎对本项目做出贡献或提出issue。
 
@@ -15,7 +16,7 @@
 
 ## 食用方法 
 ### 方法一
-本仓库包含一些latex公式，但github的markdown原生是不支持公式显示的，而docs文件夹已经利用[docsify](https://docsify.js.org/#/zh-cn/)被部署到了GitHub Pages上，所以查看文档最简便的方法就是直接访问[本项目网页版](TODO)尚未实现。。。。当然如果你还想跑一下运行相关代码的话还是得把本项目clone下来，然后运行code文件夹下相关代码。
+本仓库包含一些latex公式，但github的markdown原生是不支持公式显示的，而docs文件夹已经利用[docsify](https://docsify.js.org/#/zh-cn/)被部署到了GitHub Pages上，所以查看文档最简便的方法就是直接访问[本项目网页版](https://TrickyGo.github.io/Dive-into-DL-TensorFlow2.0)。当然如果你还想跑一下运行相关代码的话还是得把本项目clone下来，然后运行code文件夹下相关代码。
 
 ### 方法二
 你还可以在本地访问文档，先安装`docsify-cli`工具:
@@ -34,44 +35,44 @@ docsify serve docs
 
 
 ## 目录
-* [简介](README.md)
+* [简介]()
 * [阅读指南](read_guide.md)
-* [1. 深度学习简介](https://github.com/TrickyGo/tensorflow-2.0-dive-into-dl/blob/master/Documents%20(for%20reading)/ch1_DL_Introduction/deep-learning-intro.md)
+* [1. 深度学习简介](chapter01_DL-intro/deep-learning-intro.md)
 * 2\. 预备知识
-   * [2.1 环境配置](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch2_prerequsite/2.1_install.md)
-   * [2.2 数据操作](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch2_prerequsite/2.2%20data%20manipulate.md)
-   * [2.3 自动求梯度](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch2_prerequsite/2.3%20autoGradient.md)
-   * [2.4 查阅文档](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch2_prerequsite/2.4%20document.md)
+   * [2.1 环境配置](chapter02_prerequisite/2.1_install.md)
+   * [2.2 数据操作](chapter02_prerequisite/2.2_tensor.md)
+   * [2.3 自动求梯度](chapter02_prerequisite/2.3_autograd.md)
+   * [2.4 查阅文档](chapter02_prerequisite/2.4_document.md)
 * 3\. 深度学习基础
-   * [3.1 线性回归](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch3_DL_basics/3.1_linear-regression.md)
-   * [3.2 线性回归的从零开始实现](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Codes%20(for%20executing)/ch3_DL_basics/3.2%20linear%20regression%20from%20scratch.ipynb)
-   * [3.3 线性回归的简洁实现](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch3_DL_basics/3.3_linear-regression-tensorflow2.0%20.md)
-   * [3.4 softmax回归](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch3_DL_basics/3.4_softmax-regression.md)
-   * [3.5 图像分类数据集（Fashion-MNIST）](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch3_DL_basics/3.5_fashion-mnist.md)
+   * [3.1 线性回归](chapter03_DL-basics/3.1_linear-regression.md)
+   * [3.2 线性回归的从零开始实现](chapter03_DL-basics/3.2_linear-regression-scratch.md)
+   * [3.3 线性回归的简洁实现](chapter03_DL-basics/3.3_linear-regression-tensorflow2.0.md)
+   * [3.4 softmax回归](chapter03_DL-basics/3.4_softmax-regression.md)
+   * [3.5 图像分类数据集（Fashion-MNIST）](chapter03_DL-basics/3.5_fashion-mnist.md)
    * [3.6 softmax回归的从零开始实现](chapter03_DL-basics/3.6_softmax-regression-scratch.md)
-   * [3.7 softmax回归的简洁实现](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Codes%20(for%20executing)/ch3_DL_basics/3.7_softmax-regression-tensorflow2.0.ipynb)
+   * [3.7 softmax回归的简洁实现](chapter03_DL-basics/3.7_softmax-regression-tensorflow2.0.md)
    * [3.8 多层感知机](chapter03_DL-basics/3.8_mlp.md)
-   * [3.9 多层感知机的从零开始实现](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Codes%20(for%20executing)/ch3_DL_basics/3.9_mlp-scratch.ipynb)
-   * [3.10 多层感知机的简洁实现](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Codes%20(for%20executing)/ch3_DL_basics/3.10_mlp-tensorflow.ipynb)
-   * [3.11 模型选择、欠拟合和过拟合](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Codes%20(for%20executing)/ch3_DL_basics/3.11_underfit-overfit.ipynb)
+   * [3.9 多层感知机的从零开始实现](chapter03_DL-basics/3.9_mlp-scratch.md)
+   * [3.10 多层感知机的简洁实现](chapter03_DL-basics/3.10_mlp-tensorflow2.0.md)
+   * [3.11 模型选择、欠拟合和过拟合](chapter03_DL-basics/3.11_underfit-overfit.md)
    * [3.12 权重衰减](chapter03_DL-basics/3.12_weight-decay.md)
    * [3.13 丢弃法](chapter03_DL-basics/3.13_dropout.md)
-   * [3.14 正向传播、反向传播和计算图](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch3_DL_basics/3.14_backprop.md)
-   * [3.15 数值稳定性和模型初始化](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch3_DL_basics/3.15_numerical-stability-and-init.md)
+   * [3.14 正向传播、反向传播和计算图](chapter03_DL-basics/3.14_backprop.md)
+   * [3.15 数值稳定性和模型初始化](chapter03_DL-basics/3.15_numerical-stability-and-init.md)
    * [3.16 实战Kaggle比赛：房价预测](chapter03_DL-basics/3.16_kaggle-house-price.md)
 * 4\. 深度学习计算
-   * [4.1 模型构造](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch4_DL_computation/4.1%20build%20model.md)
-   * [4.2 模型参数的访问、初始化和共享](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch4_DL_computation/4.2%20parameters'%20access%2C%20initialization%20and%20sharing.md)
-   * [4.3 模型参数的延后初始化](chapter04_DL_computation/4.3_deferred-init.md)
-   * [4.4 自定义层](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch4_DL_computation/4.4%20custom%20layer.md)
-   * [4.5 读取和存储](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch4_DL_computation/4.5%20read-write.md)
-   * [4.6 GPU计算](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch4_DL_computation/4.6%20use-GPU.md)
+   * [4.1 模型构造](chapter04_DL-computation/4.1_model-construction.md)
+   * [4.2 模型参数的访问、初始化和共享](chapter04_DL-computation/4.2_parameters.md)
+   * [4.3 模型参数的延后初始化](chapter04_DL-computation/4.3_deferred-init.md)
+   * [4.4 自定义层](chapter04_DL-computation/4.4_custom-layer.md)
+   * [4.5 读取和存储](chapter04_DL-computation/4.5_read-write.md)
+   * [4.6 GPU计算](chapter04_DL-computation/4.6_use-gpu.md)
 * 5\. 卷积神经网络
-   * [5.1 二维卷积层](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/tree/master/Codes%20(for%20executing)/ch5_convolution_NN)
-   * [5.2 填充和步幅](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Codes%20(for%20executing)/ch5_convolution_NN/5.2%20padding%20and%20stride.ipynb)
-   * [5.3 多输入通道和多输出通道](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Codes%20(for%20executing)/ch5_convolution_NN/5.3%20multi-channels.ipynb)
-   * [5.4 池化层](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Codes%20(for%20executing)/ch5_convolution_NN/5.4%20pooling%20layer.ipynb)
-   * [5.5 卷积神经网络（LeNet）](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Codes%20(for%20executing)/ch5_convolution_NN/5.5%20Convolution%20net%20(LeNet).ipynb)
+   * [5.1 二维卷积层](chapter05_CNN/5.1_conv-layer.md)
+   * [5.2 填充和步幅](chapter05_CNN/5.2_padding-and-strides.md)
+   * [5.3 多输入通道和多输出通道](chapter05_CNN/5.3_channels.md)
+   * [5.4 池化层](chapter05_CNN/5.4_pooling.md)
+   * [5.5 卷积神经网络（LeNet）](chapter05_CNN/5.5_lenet.md)
    * [5.6 深度卷积神经网络（AlexNet）](chapter05_CNN/5.6_alexnet.md)
    * [5.7 使用重复元素的网络（VGG）](chapter05_CNN/5.7_vgg.md)
    * [5.8 网络中的网络（NiN）](chapter05_CNN/5.8_nin.md)
@@ -80,7 +81,7 @@ docsify serve docs
    * [5.11 残差网络（ResNet）](chapter05_CNN/5.11_resnet.md)
    * [5.12 稠密连接网络（DenseNet）](chapter05_CNN/5.12_densenet.md)
 * 6\. 循环神经网络
-   * [6.1 语言模型](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/Documents%20(for%20reading)/ch6_RNN/6.1_lang-model.md)
+   * [6.1 语言模型](chapter06_RNN/6.1_lang-model.md)
    * [6.2 循环神经网络](chapter06_RNN/6.2_rnn.md)
    * [6.3 语言模型数据集（周杰伦专辑歌词）](chapter06_RNN/6.3_lang-model-dataset.md)
    * [6.4 循环神经网络的从零开始实现](chapter06_RNN/6.4_rnn-scratch.md)
@@ -125,8 +126,6 @@ docsify serve docs
    * [10.10 束搜索](chapter10_natural-language-processing/10.10_beam-search.md)
    * [10.11 注意力机制](chapter10_natural-language-processing/10.11_attention.md)
    * [10.12 机器翻译](chapter10_natural-language-processing/10.12_machine-translation.md)
-
-
 
 持续更新中......
 
