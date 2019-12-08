@@ -12,6 +12,7 @@ from collections import namedtuple
 from matplotlib import pyplot as plt
 import tensorflow
 from tensorflow import nn
+from tensorflow import keras
 import torch.nn.functional as F
 import numpy as np
 from IPython import display
