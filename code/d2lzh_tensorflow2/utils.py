@@ -174,6 +174,24 @@ def data_iter_consecutive(corpus_indices, batch_size, num_steps, ctx=None):
         X = indices[:, i: i + num_steps]
         Y = indices[:, i + 1: i + num_steps + 1]
         yield X, Y
+        
+        
+# ###################### 7.2 ############################
+def train_2d(trainer):  # 本函数将保存在d2lzh_tensorflow2包中方便以后使用
+    x1, x2, s1, s2 = -5, -2, 0, 0  # s1和s2是自变量状态，本章后续几节会使用
+    results = [(x1, x2)]
+    for i in range(20):
+        x1, x2, s1, s2 = trainer(x1, x2, s1, s2)
+        results.append((x1, x2))
+    print('epoch %d, x1 %f, x2 %f' % (i + 1, x1, x2))
+    return results
+
+def show_trace_2d(f, results):  # 本函数将保存在d2lzh_tensorflow2包中方便以后使用
+    d2l.plt.plot(*zip(*results), '-o', color='#ff7f0e')
+    x1, x2 = np.meshgrid(np.arange(-5.5, 1.0, 0.1), np.arange(-3.0, 1.0, 0.1))
+    d2l.plt.contour(x1, x2, f(x1, x2), colors='#1f77b4')
+    d2l.plt.xlabel('x1')
+    d2l.plt.ylabel('x2')
 
   
   
