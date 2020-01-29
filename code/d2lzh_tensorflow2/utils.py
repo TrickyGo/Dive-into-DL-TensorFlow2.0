@@ -55,11 +55,10 @@ def squared_loss(y_hat, y):
     # 注意这里返回的是向量, 另外, pytorch里的MSELoss并没有除以 2
     return (y_hat - tf.reshape(y, y_hat.shape)) ** 2 / 2
 
-def sgd(params, lr, batch_size, tape):
-    # 为了和原书保持一致，这里除以了batch_size，但是应该是不用除的，因为一般用PyTorch计算loss时就默认已经
-    # 沿batch维求了平均了。
-    for param in params:
-        param.assign_sub(lr * tape.gradient(l, param) / batch_size)
+def sgd(params, lr, batch_size, grads):
+    """Mini-batch stochastic gradient descent."""
+    for i, param in enumerate(params):
+        param.assign_sub(lr * grads[i] / batch_size)
 
 # ###################### 3.5 ############################
 def get_fashion_mnist_labels(labels):
