@@ -10,7 +10,7 @@ import zipfile
 from PIL import Image
 from collections import namedtuple
 from matplotlib import pyplot as plt
-import tensorflow
+import tensorflow as tf
 from tensorflow import nn
 from tensorflow import keras
 import numpy as np
@@ -191,8 +191,80 @@ def show_trace_2d(f, results):  # 本函数将保存在d2lzh_tensorflow2包中�
     d2l.plt.contour(x1, x2, f(x1, x2), colors='#1f77b4')
     d2l.plt.xlabel('x1')
     d2l.plt.ylabel('x2')
-
+    
+# ###################### 7.3 ############################
+def get_data_ch7():  # 本函数已保存在d2lzh_tensorflow2包中方便以后使用
+    data = np.genfromtxt('../../data/airfoil_self_noise.dat', delimiter='\t')
+    data = (data - data.mean(axis=0)) / data.std(axis=0)
+    return tf.convert_to_tensor(data[:1500, :-1],dtype=tf.float32), tf.convert_to_tensor(data[:1500, -1],dtype=tf.float32)
   
+  
+def train_ch7(optimizer_fn, states, hyperparams, features, labels,
+              batch_size=10, num_epochs=2):
+    # 初始化模型
+    net, loss = d2l.linreg, d2l.squared_loss
+    w = tf.Variable(np.random.normal(0, 0.01, size=(features.shape[1], 1)), dtype=tf.float32)
+    b = tf.Variable(tf.zeros(1,dtype=tf.float32))
+
+
+    def eval_loss():
+        return np.array(tf.reduce_mean(loss(net(features, w, b), labels)))
+
+    ls = [eval_loss()]
+    data_iter = tf.data.Dataset.from_tensor_slices((features,labels)).batch(batch_size)
+    data_iter = data_iter.shuffle(100)
+  
+    
+    for _ in range(num_epochs):
+        start = time.time()
+        for batch_i, (X, y) in enumerate(data_iter):
+            with tf.GradientTape() as tape:
+                l = tf.reduce_mean(loss(net(X, w, b), y))  # 使用平均损失
+                        
+            grads = tape.gradient(l, [w,b])
+            optimizer_fn([w, b], states, hyperparams,grads)  # 迭代模型参数
+            if (batch_i + 1) * batch_size % 100 == 0:
+                ls.append(eval_loss())  # 每100个样本记录下当前训练误差
+    # 打印结果和作图
+    print('loss: %f, %f sec per epoch' % (ls[-1], time.time() - start))
+    d2l.set_figsize()
+    d2l.plt.plot(np.linspace(0, num_epochs, len(ls)), ls)
+    d2l.plt.xlabel('epoch')
+    d2l.plt.ylabel('loss')
+    
+    
+def train_tensorflow2_ch7(trainer_name, trainer_hyperparams, features, labels,
+                    batch_size=10, num_epochs=2):
+    # 初始化模型
+    net = tf.keras.Sequential()
+    net.add(tf.keras.layers.Dense(1))
+    
+    loss = tf.losses.MeanSquaredError()
+
+    def eval_loss():
+        return np.array(tf.reduce_mean(loss(net(features), labels)))
+
+    ls = [eval_loss()]
+    data_iter = tf.data.Dataset.from_tensor_slices((features,labels)).batch(batch_size)
+    data_iter = data_iter.shuffle(100)
+ 
+    # 创建Trainer实例来迭代模型参数
+    for _ in range(num_epochs):
+        start = time.time()
+        for batch_i, (X, y) in enumerate(data_iter):
+            with tf.GradientTape() as tape:
+                l = tf.reduce_mean(loss(net(X), y))  # 使用平均损失
+                        
+            grads = tape.gradient(l, net.trainable_variables)
+            trainer.apply_gradients(zip(grads, net.trainable_variables))  # 迭代模型参数
+            if (batch_i + 1) * batch_size % 100 == 0:
+                ls.append(eval_loss())  # 每100个样本记录下当前训练误差
+    # 打印结果和作图
+    print('loss: %f, %f sec per epoch' % (ls[-1], time.time() - start))
+    d2l.set_figsize()
+    d2l.plt.plot(np.linspace(0, num_epochs, len(ls)), ls)
+    d2l.plt.xlabel('epoch')
+    d2l.plt.ylabel('loss')
   
   
   
