@@ -265,7 +265,15 @@ def train_tensorflow2_ch7(trainer_name, trainer_hyperparams, features, labels,
     d2l.plt.plot(np.linspace(0, num_epochs, len(ls)), ls)
     d2l.plt.xlabel('epoch')
     d2l.plt.ylabel('loss')
-  
-  
-  
-  
+
+
+# ###################### 8.2 ############################  
+class Benchmark(object):
+  def __init__(self, prefix=None):
+    self.prefix = prefix + ' ' if prefix else ''
+
+  def __enter__(self):
+    self.start = time.time()
+
+  def __exit__(self, *args):
+    print('%stime: %.4f sec' % (self.prefix, time.time() - self.start))
