@@ -116,7 +116,7 @@ docsify serve docs
 * 10\. 自然语言处理
    * [10.1 词嵌入（word2vec）](chapter10_natural-language-processing/10.1_word2vec.md)
    * [10.2 近似训练](chapter10_natural-language-processing/10.2_approx-training.md)
-   * [10.3 word2vec的实现](chapter10_natural-language-processing/10.3_word2vec-pytorch.md)
+   * [10.3 word2vec的实现](chapter10_natural-language-processing/10.3_word2vec-tensorflow2.md)
    * [10.4 子词嵌入（fastText）](chapter10_natural-language-processing/10.4_fasttext.md)
    * [10.5 全局向量的词嵌入（GloVe）](chapter10_natural-language-processing/10.5_glove.md)
    * [10.6 求近义词和类比词](chapter10_natural-language-processing/10.6_similarity-analogy.md)
