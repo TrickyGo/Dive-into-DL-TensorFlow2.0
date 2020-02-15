@@ -78,29 +78,29 @@ def show_fashion_mnist(images, labels):
     plt.show()
 
 # ###################### 3.6 ############################
-def train_ch3(net, train_iter, test_iter, loss, num_epochs, batch_size,
-              params=None, lr=None, trainer=None):
+def train_ch3(net, train_iter, test_iter, loss, num_epochs, batch_size, params=None, lr=None, trainer=None):
     for epoch in range(num_epochs):
         train_l_sum, train_acc_sum, n = 0.0, 0.0, 0
         for X, y in train_iter:
-            with tf.GradientTape(persistent=True) as tape:
+            with tf.GradientTape() as tape:
                 y_hat = net(X)
                 l = tf.reduce_sum(loss(y_hat, y))
-            
             grads = tape.gradient(l, params)
             if trainer is None:
-                for param in params:
-                    param.assign_sub(lr * tape.gradient(l, param) / batch_size)
+                # 如果没有传入优化器，则使用原先编写的小批量随机梯度下降
+                for i, param in enumerate(params):
+                    param.assign_sub(lr * grads[i] / batch_size)
             else:
-                trainer.apply_gradients(zip(grads, params))  # “softmax回归的简洁实现”一节将用到
-
+                # tf.keras.optimizers.SGD 直接使用是随机梯度下降 theta(t+1) = theta(t) - learning_rate * gradient
+                # 这里使用批量梯度下降，需要对梯度除以 batch_size, 对应原书代码的 trainer.step(batch_size)
+                trainer.apply_gradients(zip([grad / batch_size for grad in grads], params))  
+                
             y = tf.cast(y, dtype=tf.float32)
             train_l_sum += l.numpy()
             train_acc_sum += tf.reduce_sum(tf.cast(tf.argmax(y_hat, axis=1) == tf.cast(y, dtype=tf.int64), dtype=tf.int64)).numpy()
             n += y.shape[0]
         test_acc = evaluate_accuracy(test_iter, net)
-        print('epoch %d, loss %.4f, train acc %.3f, test acc %.3f'
-              % (epoch + 1, train_l_sum / n, train_acc_sum / n, test_acc))
+        print('epoch %d, loss %.4f, train acc %.3f, test acc %.3f'% (epoch + 1, train_l_sum / n, train_acc_sum / n, test_acc))
 
 # ###################### 3.11 ############################
 def semilogy(x_vals, y_vals, x_label, y_label, x2_vals=None, y2_vals=None,
