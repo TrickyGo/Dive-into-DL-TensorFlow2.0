@@ -2,7 +2,7 @@
 <img width="700" src="img/cover.png" alt="封面"/>
 </div>
 
-[本项目](https://TrickyGo.github.io/Dive-into-DL-TensorFlow2)将[《动手学深度学习》](http://zh.d2l.ai/) 原书中MXNet代码实现改为TensorFlow2.0实现。经过我的导师咨询李沐老师，这个项目的实施已得到李沐老师的同意。原书作者：阿斯顿·张、李沐、扎卡里 C. 立顿、亚历山大 J. 斯莫拉以及其他社区贡献者，GitHub地址：https://github.com/d2l-ai/d2l-zh
+[本项目](https://TrickyGo.github.io/Dive-into-DL-TensorFlow2)将[《动手学深度学习》](http://zh.d2l.ai/) 原书中MXNet代码实现改为TensorFlow2.0实现。经过[archersama](https://github.com/archersama)的导师咨询李沐老师，这个项目的实施已得到李沐老师的同意。原书作者：阿斯顿·张、李沐、扎卡里 C. 立顿、亚历山大 J. 斯莫拉以及其他社区贡献者，GitHub地址：https://github.com/d2l-ai/d2l-zh
 
 此书的[中](https://zh.d2l.ai/)、[英](https://d2l.ai/)版本存在一些不同，本项目主要针对此书的中文版进行TensorFlow2重构。另外，本项目也参考了对此书中文版进行PyTorch重构的项目[Dive-into-DL-PyTorch](https://github.com/ShusenTang/Dive-into-DL-PyTorch)，在此表示感谢。
 
