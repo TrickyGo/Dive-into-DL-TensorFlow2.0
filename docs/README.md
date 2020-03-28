@@ -2,11 +2,11 @@
 <img width="700" src="img/cover.png" alt="封面"/>
 </div>
 
-[本项目](https://TrickyGo.github.io/Dive-into-DL-TensorFlow2)将[《动手学深度学习》](http://zh.d2l.ai/) 原书中MXNet代码实现改为TensorFlow2.0实现。经过我的导师咨询李沐老师，这个项目的实施已得到李沐老师的同意。原书作者：阿斯顿·张、李沐、扎卡里 C. 立顿、亚历山大 J. 斯莫拉以及其他社区贡献者，GitHub地址：https://github.com/d2l-ai/d2l-zh
+[本项目](https://TrickyGo.github.io/Dive-into-DL-TensorFlow2)将[《动手学深度学习》](http://zh.d2l.ai/) 原书中MXNet代码实现改为TensorFlow2.0实现。经过[archersama](https://github.com/archersama)的导师咨询李沐老师，这个项目的实施已得到李沐老师的同意。原书作者：阿斯顿·张、李沐、扎卡里 C. 立顿、亚历山大 J. 斯莫拉以及其他社区贡献者，GitHub地址：https://github.com/d2l-ai/d2l-zh
 
 此书的[中](https://zh.d2l.ai/)、[英](https://d2l.ai/)版本存在一些不同，本项目主要针对此书的中文版进行TensorFlow2重构。另外，本项目也参考了对此书中文版进行PyTorch重构的项目[Dive-into-DL-PyTorch](https://github.com/ShusenTang/Dive-into-DL-PyTorch)，在此表示感谢。
 
-**现已更新到第九章，持续更新中。。。**
+**现已更新到第九、十章，持续更新中。。。**
 
 ## 简介
 本仓库主要包含code和docs两个文件夹（外加一些数据存放在data中）。其中code文件夹就是每章相关jupyter notebook代码（基于TensorFlow2.0）；docs文件夹就是markdown格式的《动手学深度学习》书中的相关内容，然后利用[docsify](https://docsify.js.org/#/zh-cn/)将网页文档部署到GitHub Pages上，由于原书使用的是MXNet框架，所以docs内容可能与原书略有不同，但是整体内容是一样的。欢迎对本项目做出贡献或提出issue。
@@ -32,7 +32,26 @@ cd Dive-into-DL-TensorFlow2.0
 ``` shell
 docsify serve docs
 ```
+## Contributors ✨
+### 这个项目的发起人及主要贡献者如下
 
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/archersama"><img src="https://avatars2.githubusercontent.com/u/14331643?s=400&v=4" width="150px;" alt=""/><br /><sub><b>archersama</b></sub></a><br /></a> </a> <a href="https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/commits?author=archersama" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/TrickyGo"><img src="https://avatars2.githubusercontent.com/u/25994745?s=400&v=4" width="150px;" alt=""/><br /><sub><b>TrickyGo</b></sub></a><br /><a href="https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/commits?author=TrickyGo" title="Code">💻</a></td>
+    <td align="center"><a href="https://swordfaith.github.io/"><img src="https://avatars3.githubusercontent.com/u/18397468?s=400&v=4" width="150px;" alt=""/><br /><sub><b>SwordFaith</b></sub></a><br /><a href="https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/commits?author=SwordFaith" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/ShusenTang"><img src="https://avatars3.githubusercontent.com/u/16498688?s=400&v=4" width="150px;" alt=""/><br /><sub><b>ShusenTang</b></sub></a><br /><a href="https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/commits?author=ShusenTang" title="Code">💻</a></td>
+     <td align="center"><a href="https://github.com/LIANGQINGYUAN"><img src="https://avatars2.githubusercontent.com/u/19152897?s=400&v=4" width="150px;" alt=""/><br /><sub><b>LIANGQINGYUAN</b></sub></a><br /><a href="https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/commits?author=LIANGQINGYUAN" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## 目录
 * [简介]()
@@ -116,7 +135,7 @@ docsify serve docs
 * 10\. 自然语言处理
    * [10.1 词嵌入（word2vec）](chapter10_natural-language-processing/10.1_word2vec.md)
    * [10.2 近似训练](chapter10_natural-language-processing/10.2_approx-training.md)
-   * [10.3 word2vec的实现](chapter10_natural-language-processing/10.3_word2vec-pytorch.md)
+   * [10.3 word2vec的实现](chapter10_natural-language-processing/10.3_word2vec-tensorflow2.md)
    * [10.4 子词嵌入（fastText）](chapter10_natural-language-processing/10.4_fasttext.md)
    * [10.5 全局向量的词嵌入（GloVe）](chapter10_natural-language-processing/10.5_glove.md)
    * [10.6 求近义词和类比词](chapter10_natural-language-processing/10.6_similarity-analogy.md)
