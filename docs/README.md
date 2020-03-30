@@ -41,7 +41,7 @@ docsify serve docs
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/archersama"><img src="https://avatars2.githubusercontent.com/u/14331643?s=400&v=4" width="150px;" alt=""/><br /><sub><b>archersama</b></sub></a><br /></a> </a> <a href="https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/commits?author=archersama" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/archersama"><img src="https://avatars2.githubusercontent.com/u/14331643?s=400&v=4" width="150px;" alt=""/><br /><sub><b>archersama</b></sub></a><br /></a> </a> <a href="https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/commits?author=archersama" title="Code">💻(leader)</a></td>
     <td align="center"><a href="https://github.com/TrickyGo"><img src="https://avatars2.githubusercontent.com/u/25994745?s=400&v=4" width="150px;" alt=""/><br /><sub><b>TrickyGo</b></sub></a><br /><a href="https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/commits?author=TrickyGo" title="Code">💻</a></td>
     <td align="center"><a href="https://swordfaith.github.io/"><img src="https://avatars3.githubusercontent.com/u/18397468?s=400&v=4" width="150px;" alt=""/><br /><sub><b>SwordFaith</b></sub></a><br /><a href="https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/commits?author=SwordFaith" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/ShusenTang"><img src="https://avatars3.githubusercontent.com/u/16498688?s=400&v=4" width="150px;" alt=""/><br /><sub><b>ShusenTang</b></sub></a><br /><a href="https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/commits?author=ShusenTang" title="Code">💻</a></td>
