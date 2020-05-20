@@ -48,7 +48,7 @@
    * [6.2 循环神经网络](chapter06_RNN/6.2_rnn.md)
    * [6.3 语言模型数据集（周杰伦专辑歌词）](chapter06_RNN/6.3_lang-model-dataset.md)
    * [6.4 循环神经网络的从零开始实现](chapter06_RNN/6.4_rnn-scratch.md)
-   * [6.5 循环神经网络的简洁实现](chapter06_RNN/6.5_rnn-pytorch.md)
+   * [6.5 循环神经网络的简洁实现](chapter06_RNN/6.5_rnn-keras.md)
    * [6.6 通过时间反向传播](chapter06_RNN/6.6_bptt.md)
    * [6.7 门控循环单元（GRU）](chapter06_RNN/6.7_gru.md)
    * [6.8 长短期记忆（LSTM）](chapter06_RNN/6.8_lstm.md)
