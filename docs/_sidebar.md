@@ -89,3 +89,9 @@
    * [10.10 束搜索](chapter10_natural-language-processing/10.10_beam-search.md)
    * [10.11 注意力机制](chapter10_natural-language-processing/10.11_attention.md)
    * [10.12 机器翻译](chapter10_natural-language-processing/10.12_machine-translation.md)
+* 11\. 附录
+   * [11.1 主要符号一览](chapter11_appendix/11.1_notation.md)
+   * [11.2 数学基础](chapter11_appendix/11.2_math.md)
+   * [11.3 使用Jupyter记事本](chapter11_appendix/11.3_jupyter.md)
+   * [11.4 使用AWS运行代码](chapter11_appendix/11.4_aws.md)
+   * [11.5 GPU购买指南](chapter11_appendix/11.5_buy-gpu.md)
