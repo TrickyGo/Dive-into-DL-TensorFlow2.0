@@ -8,7 +8,7 @@
 
 **现已更新到第九、十章，持续更新中。。。**
 
-***项目已被机器之心[报导](https://zhuanlan.zhihu.com/p/96932594)，并且受到原作者李沐的[认可](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/issues/51)***
+#### 项目已被机器之心[报导](https://zhuanlan.zhihu.com/p/96932594)，并且受到原作者李沐的[认可](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/issues/51)
 
 
 ## 简介
