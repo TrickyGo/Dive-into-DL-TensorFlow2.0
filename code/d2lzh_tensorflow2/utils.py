@@ -589,4 +589,8 @@ def getVOCSegDataset(is_train, crop_size, voc_dir, colormap2label, max_num=None)
     dataset = dataset.map(_normalize)
     return dataset
 
-
+# ###################### 9.12 ############################ 
+# 本函数已保存在d2lzh包中方便以后使用
+def mkdir_if_not_exist(path):
+    if not os.path.exists(os.path.join(*path)):
+        os.makedirs(os.path.join(*path))
