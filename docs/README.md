@@ -136,7 +136,7 @@ docsify serve docs
    * [9.6 目标检测数据集（皮卡丘）](chapter09_computer-vision/9.6_object-detection-dataset.md)
    * [9.8 区域卷积神经网络（R-CNN）系列](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/docs/chapter09_computer-vision/9.8_rcnn.md)
    * [9.9 语义分割和数据集](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/docs/chapter09_computer-vision/9.9_semantic-segmentation-and-dataset.md)
-   * [9.10 9.10 全卷积网络（FCN）](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/docs/chapter09_computer-vision/9_10_fcn.md)
+   * [9.10 全卷积网络（FCN）](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/docs/chapter09_computer-vision/9_10_fcn.md)
    * [9.11 样式迁移](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/docs/chapter09_computer-vision/9_11_neural_style.md)
    * [9.12 实战Kaggle比赛：图像分类（CIFAR-10）](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/docs/chapter09_computer-vision/9_12_kaggle_cifar10.md)
    * [9.13 实战Kaggle比赛：狗的品种识别（ImageNet Dogs](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/docs/chapter09_computer-vision/9_13_kaggle_dog.md)
