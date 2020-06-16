@@ -134,7 +134,13 @@ docsify serve docs
    * [9.4 锚框](chapter09_computer-vision/9.4_anchor.md)
    * [9.5 多尺度目标检测](chapter09_computer-vision/9.5_multiscale-object-detection.md)
    * [9.6 目标检测数据集（皮卡丘）](chapter09_computer-vision/9.6_object-detection-dataset.md)
-   * 待更新...
+  
+   * [9.8 区域卷积神经网络（R-CNN）系列](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/docs/chapter09_computer-vision/9.8_rcnn.md)
+   * [9.9 语义分割和数据集](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/docs/chapter09_computer-vision/9.9_semantic-segmentation-and-dataset.md)
+   * [9.10 9.10 全卷积网络（FCN）](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/docs/chapter09_computer-vision/9_10_fcn.md)
+   * [9.11 样式迁移](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/docs/chapter09_computer-vision/9_11_neural_style.md)
+   * [9.12 实战Kaggle比赛：图像分类（CIFAR-10）](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/docs/chapter09_computer-vision/9_12_kaggle_cifar10.md)
+   * [9.13 实战Kaggle比赛：狗的品种识别（ImageNet Dogs](https://github.com/TrickyGo/Dive-into-DL-TensorFlow2.0/blob/master/docs/chapter09_computer-vision/9_13_kaggle_dog.md)
 * 10\. 自然语言处理
    * [10.1 词嵌入（word2vec）](chapter10_natural-language-processing/10.1_word2vec.md)
    * [10.2 近似训练](chapter10_natural-language-processing/10.2_approx-training.md)
