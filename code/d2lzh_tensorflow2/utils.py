@@ -455,3 +455,142 @@ class Benchmark(object):
 
   def __exit__(self, *args):
     print('%stime: %.4f sec' % (self.prefix, time.time() - self.start))
+    
+    
+# ###################### 9.10 ############################ 
+from tqdm import tqdm
+
+# 本函数已保存在d2lzh_pytorch包中方便以后使用
+def show_images(imgs, num_rows, num_cols, scale=2):
+    figsize = (num_cols * scale, num_rows * scale)
+    _, axes = plt.subplots(num_rows, num_cols, figsize=figsize)
+    for i in range(num_rows):
+        for j in range(num_cols):
+            axes[i][j].imshow(imgs[i * num_cols + j])
+            axes[i][j].axes.get_xaxis().set_visible(False)
+            axes[i][j].axes.get_yaxis().set_visible(False)
+    return axes
+
+# 本函数已保存在d2lzh_pytorch中方便以后使用
+VOC_COLORMAP = [[0, 0, 0], [128, 0, 0], [0, 128, 0], [128, 128, 0], [0, 0, 128],
+        [128, 0, 128], [0, 128, 128], [128, 128, 128], [64, 0, 0], [192, 0, 0],
+        [64, 128, 0], [192, 128, 0], [64, 0, 128], [192, 0, 128], [64, 128, 128],
+        [192, 128, 128], [0, 64, 0], [128, 64, 0], [0, 192, 0], [128, 192, 0],
+        [0, 64, 128]]
+# 本函数已保存在d2lzh_pytorch中方便以后使用
+VOC_CLASSES = ['background', 'aeroplane', 'bicycle', 'bird', 'boat',
+        'bottle', 'bus', 'car', 'cat', 'chair', 'cow',
+        'diningtable', 'dog', 'horse', 'motorbike', 'person',
+        'potted plant', 'sheep', 'sofa', 'train',
+        'tv/monitor']
+
+# 下载并解压文件到data目录
+def download_voc_pascal():
+    import requests
+    import tarfile
+
+    r = requests.get("http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar")
+    with open("../../data/VOCtrainval_11-May-2012.tar", 'wb') as f:
+        f.write(r.content)
+
+    def extract(tar_path, target_path):
+        try:
+            t = tarfile.open(tar_path)
+            t.extractall(path = target_path)
+            return True
+        except:
+            return False
+
+    extract("../../data/VOCtrainval_11-May-2012.tar", "../../data/")
+
+# 本函数已保存在d2lzh_pytorch中方便以后使用（我没有
+
+def read_voc_images(root="../../data/VOCdevkit/VOC2012", 
+            is_train=True, max_num=None):
+    txt_fname = '%s/ImageSets/Segmentation/%s' % (
+        root, 'train.txt' if is_train else 'val.txt')
+    with open(txt_fname, 'r') as f:
+        images = f.read().split()
+    if max_num is not None:
+        images = images[:min(max_num, len(images))]
+    features, labels = [None] * len(images), [None] * len(images)
+    for i, fname in tqdm(enumerate(images)):
+        feature_tmp = tf.io.read_file('%s/JPEGImages/%s.jpg' % (root, fname))
+        features[i] = tf.image.decode_jpeg(feature_tmp)
+        label_tmp = tf.io.read_file('%s/SegmentationClass/%s.png' % (root, fname))
+        labels[i] = tf.image.decode_png(label_tmp)
+    return features, labels #shape=(h, w, c)
+
+# 本函数已保存在d2lzh_pytorch中方便以后使用(没)
+def voc_label_indices(colormap, colormap2label):
+    """
+    convert colormap (tf image) to colormap2label (uint8 tensor).
+    """
+    colormap = tf.cast(colormap, dtype=tf.int32)
+    idx = tf.add(tf.multiply(colormap[:, :, 0], 256), colormap[:, :, 1])
+    idx = tf.add(tf.multiply(idx, 256), colormap[:, :, 2])
+
+    return tf.gather_nd(colormap2label, tf.expand_dims(idx, -1))
+
+# 本函数已保存在d2lzh_pytorch中方便以后使用
+def voc_rand_crop(feature, label, height, width):
+    """
+    Random crop feature (tf image) and label (tf image).
+    先将channel合并，剪裁之后再分开
+    """
+    combined = tf.concat([feature, label], axis=2)
+    last_label_dim = tf.shape(label)[-1]
+    last_feature_dim = tf.shape(feature)[-1]
+    combined_crop = tf.image.random_crop(combined,
+                        size=tf.concat([(height, width), [last_label_dim + last_feature_dim]],axis=0))
+    return combined_crop[:, :, :last_feature_dim], combined_crop[:, :, last_feature_dim:]
+
+# 本函数已保存在d2lzh_pytorch中方便以后使用
+def getVOCSegDataset(is_train, crop_size, voc_dir, colormap2label, max_num=None):
+    """
+    crop_size: (h, w)
+    """
+    features, labels = read_voc_images(root=voc_dir, 
+                        is_train=is_train,
+                        max_num=max_num)
+    def _filter(imgs, crop_size):
+        return [img for img in imgs if (
+            img.shape[0] >= crop_size[0] and
+            img.shape[1] >= crop_size[1])]
+    
+    def _crop(features, labels):
+        features_crop = []
+        labels_crop = []
+        for feature, label in zip(features, labels):
+            feature, label = voc_rand_crop(feature, label, 
+                            height=crop_size[0],
+                            width=crop_size[1])
+            features_crop.append(feature)
+            labels_crop.append(label)
+        return features_crop, labels_crop
+    
+    def _normalize(feature, label):
+        rgb_mean = np.array([0.485, 0.456, 0.406])
+        rgb_std = np.array([0.229, 0.224, 0.225])
+        
+        label = voc_label_indices(label, colormap2label)
+        feature = tf.cast(feature, tf.float32)
+        feature = tf.divide(feature, 255.)
+        # 我试着去掉这个反而更准
+        # feature = tf.divide(tf.subtract(feature, rgb_mean), rgb_std)
+        return feature, label
+
+    features = _filter(features, crop_size)
+    labels = _filter(labels, crop_size)
+    features, labels = _crop(features, labels)
+
+    print('read ' + str(len(features)) + ' valid examples')
+    dataset = tf.data.Dataset.from_tensor_slices((features, labels))
+    dataset = dataset.map(_normalize)
+    return dataset
+
+# ###################### 9.12 ############################ 
+# 本函数已保存在d2lzh包中方便以后使用
+def mkdir_if_not_exist(path):
+    if not os.path.exists(os.path.join(*path)):
+        os.makedirs(os.path.join(*path))

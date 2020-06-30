@@ -48,7 +48,7 @@
    * [6.2 循环神经网络](chapter06_RNN/6.2_rnn.md)
    * [6.3 语言模型数据集（周杰伦专辑歌词）](chapter06_RNN/6.3_lang-model-dataset.md)
    * [6.4 循环神经网络的从零开始实现](chapter06_RNN/6.4_rnn-scratch.md)
-   * [6.5 循环神经网络的简洁实现](chapter06_RNN/6.5_rnn-pytorch.md)
+   * [6.5 循环神经网络的简洁实现](chapter06_RNN/6.5_rnn-keras.md)
    * [6.6 通过时间反向传播](chapter06_RNN/6.6_bptt.md)
    * [6.7 门控循环单元（GRU）](chapter06_RNN/6.7_gru.md)
    * [6.8 长短期记忆（LSTM）](chapter06_RNN/6.8_lstm.md)
@@ -89,3 +89,9 @@
    * [10.10 束搜索](chapter10_natural-language-processing/10.10_beam-search.md)
    * [10.11 注意力机制](chapter10_natural-language-processing/10.11_attention.md)
    * [10.12 机器翻译](chapter10_natural-language-processing/10.12_machine-translation.md)
+* 11\. 附录
+   * [11.1 主要符号一览](chapter11_appendix/11.1_notation.md)
+   * [11.2 数学基础](chapter11_appendix/11.2_math.md)
+   * [11.3 使用Jupyter记事本](chapter11_appendix/11.3_jupyter.md)
+   * [11.4 使用AWS运行代码](chapter11_appendix/11.4_aws.md)
+   * [11.5 GPU购买指南](chapter11_appendix/11.5_buy-gpu.md)
