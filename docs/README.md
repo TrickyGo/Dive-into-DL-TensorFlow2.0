@@ -19,7 +19,7 @@
 
 ## 食用方法 
 ### 方法一
-本仓库包含一些latex公式，但github的markdown原生是不支持公式显示的，而docs文件夹已经利用[docsify](https://docsify.js.org/#/zh-cn/)被部署到了GitHub Pages上，所以查看文档最简便的方法就是直接访问[本项目网页版](https://TrickyGo.github.io/Dive-into-DL-TensorFlow2.0)。当然如果你还想跑一下运行相关代码的话还是得把本项目clone下来，然后运行code文件夹下相关代码。
+本仓库包含一些latex公式，但github的markdown原生是不支持公式显示的，而docs文件夹已经利用[docsify](https://docsify.js.org/#/zh-cn/)被部署到了GitHub Pages上，所以查看文档**最简便的方法就是直接访问[本项目网页版](https://TrickyGo.github.io/Dive-into-DL-TensorFlow2.0)**。当然如果你还想跑一下运行相关代码的话还是得把本项目clone下来，然后运行code文件夹下相关代码。
 
 ### 方法二
 你还可以在本地访问文档，先安装`docsify-cli`工具:
